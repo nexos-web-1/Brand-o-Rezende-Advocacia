@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #182a40; }
+  html { scroll-behavior: smooth; }
+  ::selection { background: #dabf86; color: #182a40; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-plus { transform: rotate(45deg); }
+  details > summary { transition: color .25s ease; }
+  details:hover > summary { color: #b08d3e !important; }
+
+  a[href^="https://wa.me"] { transition: transform .28s ease, box-shadow .28s ease, filter .28s ease; }
+  a[href^="https://wa.me"]:hover { transform: translateY(-2px); filter: brightness(1.04); }
+
+  [data-card] { transition: transform .35s cubic-bezier(.22,.61,.36,1), border-color .35s ease, box-shadow .35s ease; }
+  [data-card]:hover { transform: translateY(-5px); border-color: rgba(218,191,134,0.95); box-shadow: 0 16px 38px rgba(10,18,30,0.18); }
+
+  @keyframes rvRise {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal] { opacity: 0; }
+    [data-reveal].rv-in { animation: rvRise .8s cubic-bezier(.22,.61,.36,1) both; }
+  }
+</style>
+</helmet>
+
+<div style="font-family: 'Montserrat', sans-serif; color: #e5e5e5; background: #182a40; overflow-x: hidden;">
+
+  <!-- ============ NAV ============ -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(24,42,64,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(218,191,134,0.18);">
+    <nav style="max-width: 1200px; margin: 0 auto; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#" style="display: flex; align-items: center;">
+        <img src="images/br-logo.png" alt="Brandão &amp; Rezende Advocacia" style="height: 46px; width: auto; display: block;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 36px;">
+        <a href="#beneficios" style="color: #e5e5e5; text-decoration: none; font-size: 13px; letter-spacing: 0.5px; font-weight: 400; display:none;" class="navlink">Benefícios</a>
+        <a href="#socios" style="color: #e5e5e5; text-decoration: none; font-size: 13px; letter-spacing: 0.5px;" class="navlink">Os Sócios</a>
+        <a href="#faq" style="color: #e5e5e5; text-decoration: none; font-size: 13px; letter-spacing: 0.5px;" class="navlink">FAQ</a>
+        <a href="https://wa.me/5531983295248?text=Ol%C3%A1%20Thales%20Brand%C3%A3o!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20regulariza%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener" style="background: #dabf86; color: #182a40; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; padding: 11px 22px; border-radius: 6px;">Falar com Especialista</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section style="position: relative; background: linear-gradient(180deg, #182a40 0%, #1c3047 100%); padding: 110px 40px 120px;">
+    <div style="position:absolute; inset:0; background-image: radial-gradient(circle at 80% 20%, rgba(218,191,134,0.08), transparent 45%); pointer-events:none;"></div>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; position: relative;">
+      <div>
+        <div data-reveal style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(218,191,134,0.4); border-radius: 40px; padding: 8px 18px; margin-bottom: 30px;">
+          <span style="width: 6px; height: 6px; background: #dabf86; border-radius: 50%;"></span>
+          <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #dabf86;">Direito Imobiliário Especializado</span>
+        </div>
+        <h1 data-reveal style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 56px; line-height: 1.12; color: #fff; letter-spacing: -0.5px;">
+          Regularizamos o Seu Imóvel de Forma <span style="color: #dabf86; font-style: italic;">Rápida, Segura</span> e Descomplicada.
+        </h1>
+        <p data-reveal style="margin-top: 28px; font-size: 17px; line-height: 1.75; color: rgba(229,229,229,0.78); font-weight: 300; max-width: 540px;">
+          Assessoria jurídica altamente especializada em Direito Imobiliário Extrajudicial e Judicial. Descomplicamos processos como Usucapião, Inventários e Contratos para garantir a sua tranquilidade e a valorização do seu patrimônio.
+        </p>
+        <div data-reveal style="margin-top: 40px; display: flex; flex-direction: column; gap: 16px;">
+          <a href="https://wa.me/5531983295248?text=Ol%C3%A1%20Thales%20Brand%C3%A3o!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20regulariza%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: #dabf86; color: #182a40; text-decoration: none; font-weight: 600; font-size: 16px; letter-spacing: 0.3px; padding: 19px 38px; border-radius: 6px; width: fit-content; box-shadow: 0 10px 30px rgba(218,191,134,0.18);">
+            <i class="fa-brands fa-whatsapp" style="font-size: 19px;"></i> Falar com um Especialista Agora
+          </a>
+          <p style="font-size: 13px; color: rgba(229,229,229,0.6); font-weight: 300; max-width: 460px; line-height: 1.6;">
+            Precisa de um especialista em Direito Imobiliário? Garanta agora um atendimento ágil, eficiente e humanizado pelo WhatsApp.
+          </p>
+        </div>
+      </div>
+      <div data-reveal style="position: relative;">
+        <div style="position: absolute; top: -16px; left: -16px; right: 16px; bottom: 16px; border: 1px solid rgba(218,191,134,0.45); border-radius: 8px;"></div>
+        <div style="position: relative; aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; background: linear-gradient(160deg, #1f344e 0%, #16273b 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; padding: 40px;">
+          <div style="position:absolute; inset:0; background-image: repeating-linear-gradient(135deg, rgba(218,191,134,0.05) 0 2px, transparent 2px 16px);"></div>
+          <img src="images/br-mono.png" alt="Brandão &amp; Rezende" style="width: 150px; height: auto; opacity: 0.92; position: relative;">
+          <div style="width: 44px; height: 2px; background: rgba(218,191,134,0.5); position: relative;"></div>
+          <span style="font-family: monospace; font-size: 12px; color: rgba(229,229,229,0.55); letter-spacing: 0.5px; text-align:center; line-height: 1.6; position: relative;">retrato institucional dos sócios<br>em breve</span>
+        </div>
+      </div>
+    </div>
+    <!-- trust strip -->
+    <div style="max-width: 1200px; margin: 80px auto 0; padding-top: 36px; border-top: 1px solid rgba(218,191,134,0.15); display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between; position: relative;">
+      <div data-reveal style="display:flex; align-items:center; gap:14px;"><i class="fa-solid fa-landmark" style="color:#dabf86; font-size:20px;"></i><span style="font-size:13px; line-height:1.5; color:rgba(229,229,229,0.7); font-weight:300;">Experiência na Procuradoria-Geral<br>Municipal de Betim</span></div>
+      <div data-reveal style="display:flex; align-items:center; gap:14px;"><i class="fa-solid fa-scale-balanced" style="color:#dabf86; font-size:20px;"></i><span style="font-size:13px; line-height:1.5; color:rgba(229,229,229,0.7); font-weight:300;">Atuação Extrajudicial<br>e Judicial</span></div>
+      <div data-reveal style="display:flex; align-items:center; gap:14px;"><i class="fa-solid fa-shield-halved" style="color:#dabf86; font-size:20px;"></i><span style="font-size:13px; line-height:1.5; color:rgba(229,229,229,0.7); font-weight:300;">Rigor técnico e<br>transparência absoluta</span></div>
+      <div data-reveal style="display:flex; align-items:center; gap:14px;"><i class="fa-solid fa-clock" style="color:#dabf86; font-size:20px;"></i><span style="font-size:13px; line-height:1.5; color:rgba(229,229,229,0.7); font-weight:300;">Soluções em meses,<br>não em anos</span></div>
+    </div>
+  </section>
+
+  <!-- ============ PROPOSTA DE VALOR ============ -->
+  <section style="background: #e5e5e5; color: #182a40; padding: 110px 40px;">
+    <div data-reveal style="max-width: 860px; margin: 0 auto; text-align: center;">
+      <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #b08d3e; font-weight: 600;">Proposta de Valor</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38px; line-height: 1.25; margin-top: 18px; color: #182a40;">
+        Um imóvel irregular não é só burocracia — é um risco direto ao seu patrimônio.
+      </h2>
+      <div style="width: 56px; height: 3px; background: #dabf86; margin: 32px auto;"></div>
+      <p style="font-size: 17px; line-height: 1.85; color: #3a4452; font-weight: 400; margin-bottom: 22px;">
+        A falta de documentação adequada impede a venda, desvaloriza o bem e abre margem para litígios complexos. Na <strong style="color:#182a40;">Brandão e Rezende Advocacia</strong>, compreendemos que lidar com cartórios e tribunais pode parecer um labirinto intransponível.
+      </p>
+      <p style="font-size: 17px; line-height: 1.85; color: #3a4452; font-weight: 400;">
+        Nossa missão é assumir esse peso por você. Através de uma atuação técnica, responsável e orientada a resultados, entregamos soluções jurídicas práticas que <strong style="color:#182a40;">blindam o seu patrimônio</strong>. Nós cuidamos da complexidade da lei para que você desfrute da segurança do que é seu.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ DOR ============ -->
+  <section style="background: #182a40; padding: 110px 40px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div data-reveal style="max-width: 720px;">
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #dabf86; font-weight: 600;">Você se identifica?</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 40px; line-height: 1.2; margin-top: 18px; color: #fff;">
+          Você sente que regularizar seu imóvel é uma batalha perdida?
+        </h2>
+        <p style="font-size: 16px; line-height: 1.7; color: rgba(229,229,229,0.72); font-weight: 300; margin-top: 22px;">
+          Muitos proprietários adiam a regularização de seus bens por acreditarem que o processo será um pesadelo sem fim. Você provavelmente se identifica com estas situações:
+        </p>
+      </div>
+      <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(218,191,134,0.18); border: 1px solid rgba(218,191,134,0.18);">
+        <div data-reveal style="background: #182a40; padding: 34px; display: flex; gap: 18px; align-items: flex-start;">
+          <i class="fa-solid fa-file-circle-xmark" style="color: #dabf86; font-size: 22px; margin-top: 2px;"></i>
+          <p style="font-size: 15px; line-height: 1.6; color: rgba(229,229,229,0.85); font-weight: 300;">Angústia por não ter a <strong style="color:#fff; font-weight:500;">escritura definitiva</strong> do imóvel em que vive ou investiu.</p>
+        </div>
+        <div data-reveal style="background: #182a40; padding: 34px; display: flex; gap: 18px; align-items: flex-start;">
+          <i class="fa-solid fa-house-circle-exclamation" style="color: #dabf86; font-size: 22px; margin-top: 2px;"></i>
+          <p style="font-size: 15px; line-height: 1.6; color: rgba(229,229,229,0.85); font-weight: 300;">Medo de <strong style="color:#fff; font-weight:500;">perder oportunidades de venda</strong> devido à documentação pendente.</p>
+        </div>
+        <div data-reveal style="background: #182a40; padding: 34px; display: flex; gap: 18px; align-items: flex-start;">
+          <i class="fa-solid fa-stamp" style="color: #dabf86; font-size: 22px; margin-top: 2px;"></i>
+          <p style="font-size: 15px; line-height: 1.6; color: rgba(229,229,229,0.85); font-weight: 300;">Frustração com a <strong style="color:#fff; font-weight:500;">burocracia interminável</strong> de cartórios e órgãos públicos.</p>
+        </div>
+        <div data-reveal style="background: #182a40; padding: 34px; display: flex; gap: 18px; align-items: flex-start;">
+          <i class="fa-solid fa-file-signature" style="color: #dabf86; font-size: 22px; margin-top: 2px;"></i>
+          <p style="font-size: 15px; line-height: 1.6; color: rgba(229,229,229,0.85); font-weight: 300;">Insegurança ao assinar <strong style="color:#fff; font-weight:500;">contratos de compra e venda</strong> sem o devido respaldo jurídico.</p>
+        </div>
+        <div data-reveal style="background: #182a40; padding: 34px; display: flex; gap: 18px; align-items: flex-start; grid-column: 1 / -1;">
+          <i class="fa-solid fa-hourglass-half" style="color: #dabf86; font-size: 22px; margin-top: 2px;"></i>
+          <p style="font-size: 15px; line-height: 1.6; color: rgba(229,229,229,0.85); font-weight: 300;">Receio de que um processo de <strong style="color:#fff; font-weight:500;">inventário ou usucapião</strong> dure décadas na justiça.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUÇÃO ============ -->
+  <section style="background: #182a40; padding: 0 40px 110px;">
+    <div style="max-width: 1100px; margin: 0 auto; background: linear-gradient(135deg, #1d3349 0%, #1a2d44 100%); border: 1px solid rgba(218,191,134,0.22); border-radius: 10px; padding: 70px 64px; position: relative; overflow: hidden;">
+      <div style="position:absolute; top:0; right:0; width:200px; height:200px; background: radial-gradient(circle at top right, rgba(218,191,134,0.1), transparent 70%);"></div>
+      <div data-reveal style="max-width: 760px; position: relative;">
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #dabf86; font-weight: 600;">A Solução</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38px; line-height: 1.22; margin-top: 18px; color: #fff;">
+          A inteligência jurídica a favor do seu patrimônio.
+        </h2>
+        <p style="font-size: 16px; line-height: 1.8; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 24px;">
+          A Brandão e Rezende Advocacia não oferece apenas representação legal; oferecemos <strong style="color:#dabf86; font-weight:500;">estratégia</strong>. Priorizamos vias extrajudiciais sempre que possível, reduzindo drasticamente o tempo e os custos das demandas imobiliárias.
+        </p>
+        <p style="font-size: 16px; line-height: 1.8; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 18px;">
+          Seja para a regularização de loteamentos, averbações complexas ou processos de usucapião, nossa equipe aplica o rigor técnico exigido pelas instituições públicas com a agilidade que o setor privado demanda.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section style="background: #e5e5e5; color: #182a40; padding: 110px 40px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div data-reveal style="text-align: center; max-width: 660px; margin: 0 auto 60px;">
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #b08d3e; font-weight: 600;">Áreas de Atuação</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38px; line-height: 1.2; margin-top: 16px; color: #182a40;">
+          Soluções completas em Direito Imobiliário
+        </h2>
+        <div style="width: 56px; height: 3px; background: #dabf86; margin: 26px auto 0;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div data-reveal data-card style="background: #efefef; border: 1px solid rgba(218,191,134,0.55); border-radius: 8px; padding: 38px 32px;">
+          <i class="fa-solid fa-house-chimney-window" style="color: #b08d3e; font-size: 26px;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 22px; margin-top: 22px; color: #182a40;">Usucapião</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4a5462; font-weight: 400; margin-top: 12px;">Reconhecimento de propriedade direto no cartório de registro de imóveis, com agilidade extrajudicial.</p>
+        </div>
+        <div data-reveal data-card style="background: #efefef; border: 1px solid rgba(218,191,134,0.55); border-radius: 8px; padding: 38px 32px;">
+          <i class="fa-solid fa-scroll" style="color: #b08d3e; font-size: 26px;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 22px; margin-top: 22px; color: #182a40;">Inventário e Sucessões</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4a5462; font-weight: 400; margin-top: 12px;">Sucessões conduzidas com técnica e empatia, preservando relações familiares e o patrimônio.</p>
+        </div>
+        <div data-reveal data-card style="background: #efefef; border: 1px solid rgba(218,191,134,0.55); border-radius: 8px; padding: 38px 32px;">
+          <i class="fa-solid fa-map-location-dot" style="color: #b08d3e; font-size: 26px;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 22px; margin-top: 22px; color: #182a40;">Regularização Fundiária</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4a5462; font-weight: 400; margin-top: 12px;">Regularização de loteamentos e averbações complexas com o rigor exigido pelas instituições públicas.</p>
+        </div>
+        <div data-reveal data-card style="background: #efefef; border: 1px solid rgba(218,191,134,0.55); border-radius: 8px; padding: 38px 32px;">
+          <i class="fa-solid fa-file-contract" style="color: #b08d3e; font-size: 26px;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 22px; margin-top: 22px; color: #182a40;">Contratos Imobiliários</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4a5462; font-weight: 400; margin-top: 12px;">Contratos de compra e venda elaborados sob medida para evitar que problemas futuros sequer existam.</p>
+        </div>
+        <div data-reveal data-card style="background: #efefef; border: 1px solid rgba(218,191,134,0.55); border-radius: 8px; padding: 38px 32px;">
+          <i class="fa-solid fa-building-shield" style="color: #b08d3e; font-size: 26px;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 22px; margin-top: 22px; color: #182a40;">Consultoria Empresarial</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4a5462; font-weight: 400; margin-top: 12px;">Estruturação e defesa de ativos imobiliários e assessoria empresarial em âmbito nacional.</p>
+        </div>
+        <div data-reveal data-card style="background: #efefef; border: 1px solid rgba(218,191,134,0.55); border-radius: 8px; padding: 38px 32px;">
+          <i class="fa-solid fa-clipboard-check" style="color: #b08d3e; font-size: 26px;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 22px; margin-top: 22px; color: #182a40;">Averbações e Escrituras</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4a5462; font-weight: 400; margin-top: 12px;">Atualização e regularização da matrícula do imóvel para garantir a escritura definitiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFÍCIOS ============ -->
+  <section id="beneficios" style="background: #182a40; padding: 110px 40px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: start;">
+        <div data-reveal style="position: sticky; top: 110px;">
+          <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #dabf86; font-weight: 600;">Benefícios</span>
+          <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38px; line-height: 1.22; margin-top: 18px; color: #fff;">
+            O que muda quando seu patrimônio está protegido.
+          </h2>
+          <div style="width: 56px; height: 3px; background: #dabf86; margin-top: 28px;"></div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div data-reveal style="display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid rgba(218,191,134,0.16);">
+            <div style="flex-shrink:0; width: 52px; height: 52px; border: 1px solid rgba(218,191,134,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-trend-up" style="color: #dabf86; font-size: 18px;"></i></div>
+            <div><h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20px; color: #fff;">Valorização Imediata</h3><p style="font-size: 15px; line-height: 1.7; color: rgba(229,229,229,0.72); font-weight: 300; margin-top: 8px;">Um imóvel devidamente registrado sofre uma valorização exponencial e imediata no mercado.</p></div>
+          </div>
+          <div data-reveal style="display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid rgba(218,191,134,0.16);">
+            <div style="flex-shrink:0; width: 52px; height: 52px; border: 1px solid rgba(218,191,134,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-shield-halved" style="color: #dabf86; font-size: 18px;"></i></div>
+            <div><h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20px; color: #fff;">Segurança Absoluta</h3><p style="font-size: 15px; line-height: 1.7; color: rgba(229,229,229,0.72); font-weight: 300; margin-top: 8px;">Blindagem do seu patrimônio contra litígios de terceiros e problemas com o poder público.</p></div>
+          </div>
+          <div data-reveal style="display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid rgba(218,191,134,0.16);">
+            <div style="flex-shrink:0; width: 52px; height: 52px; border: 1px solid rgba(218,191,134,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-bolt" style="color: #dabf86; font-size: 18px;"></i></div>
+            <div><h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20px; color: #fff;">Resoluções Aceleradas</h3><p style="font-size: 15px; line-height: 1.7; color: rgba(229,229,229,0.72); font-weight: 300; margin-top: 8px;">Foco em soluções extrajudiciais (direto em cartório) para resolver em meses o que demoraria anos nos tribunais.</p></div>
+          </div>
+          <div data-reveal style="display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid rgba(218,191,134,0.16);">
+            <div style="flex-shrink:0; width: 52px; height: 52px; border: 1px solid rgba(218,191,134,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-people-roof" style="color: #dabf86; font-size: 18px;"></i></div>
+            <div><h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20px; color: #fff;">Tranquilidade Familiar</h3><p style="font-size: 15px; line-height: 1.7; color: rgba(229,229,229,0.72); font-weight: 300; margin-top: 8px;">Sucessão e inventários conduzidos com técnica e empatia, preservando relações e bens.</p></div>
+          </div>
+          <div data-reveal style="display: flex; gap: 24px; padding: 28px 0;">
+            <div style="flex-shrink:0; width: 52px; height: 52px; border: 1px solid rgba(218,191,134,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-clipboard-list" style="color: #dabf86; font-size: 18px;"></i></div>
+            <div><h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20px; color: #fff;">Assessoria Preventiva</h3><p style="font-size: 15px; line-height: 1.7; color: rgba(229,229,229,0.72); font-weight: 300; margin-top: 8px;">Contratos elaborados sob medida para evitar que problemas futuros sequer existam.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORIDADE / SÓCIOS ============ -->
+  <section id="socios" style="background: #142334; padding: 110px 40px; border-top: 1px solid rgba(218,191,134,0.15);">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div data-reveal style="text-align: center; max-width: 700px; margin: 0 auto 64px;">
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #dabf86; font-weight: 600;">Prova Social &amp; Autoridade</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38px; line-height: 1.22; margin-top: 18px; color: #fff;">
+          Excelência forjada no Setor Público e no Mercado Corporativo
+        </h2>
+        <div style="width: 56px; height: 3px; background: #dabf86; margin: 26px auto 0;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+        <!-- Thales -->
+        <div data-reveal data-card style="background: #182a40; border: 1px solid rgba(218,191,134,0.22); border-radius: 10px; overflow: hidden;">
+          <div style="aspect-ratio: 4/5; overflow: hidden; background: #1d3349;">
+            <img src="images/socio-glasses.jpg" alt="Thales Brandão" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block;">
+          </div>
+          <div style="padding: 34px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 25px; color: #fff;">Thales Brandão</h3>
+            <p style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #dabf86; margin-top: 6px;">Direito Imobiliário &amp; Contratual</p>
+            <div style="width: 40px; height: 2px; background: rgba(218,191,134,0.5); margin: 20px 0;"></div>
+            <p style="font-size: 14px; line-height: 1.8; color: rgba(229,229,229,0.78); font-weight: 300;">Conta com 3 anos de atuação direta nas complexas demandas imobiliárias da Procuradoria-Geral do Município de Betim, conferindo-lhe uma visão privilegiada e estratégica sobre o funcionamento da Administração Pública e a regularização fundiária.</p>
+          </div>
+        </div>
+        <!-- Filipe -->
+        <div data-reveal data-card style="background: #182a40; border: 1px solid rgba(218,191,134,0.22); border-radius: 10px; overflow: hidden;">
+          <div style="aspect-ratio: 4/5; overflow: hidden; background: #1d3349;">
+            <img src="images/socio-mustache.jpg" alt="Filipe Rezende" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block;">
+          </div>
+          <div style="padding: 34px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 25px; color: #fff;">Filipe Rezende</h3>
+            <p style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #dabf86; margin-top: 6px;">Sócio-fundador · Direito Empresarial</p>
+            <div style="width: 40px; height: 2px; background: rgba(218,191,134,0.5); margin: 20px 0;"></div>
+            <p style="font-size: 14px; line-height: 1.8; color: rgba(229,229,229,0.78); font-weight: 300;">Trajetória marcante na Procuradoria-Geral do Município de Betim. Além da forte atuação na estruturação e defesa de ativos imobiliários, destaca-se no Direito Empresarial aplicado ao mercado de Apostas de Quotas Fixas, prestando assessoria a grandes players. Uma bagagem que traduz visão jurídica atualizada e excelência em operações de alto risco.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFERTA / DIAGNÓSTICO ============ -->
+  <section style="background: #e5e5e5; color: #182a40; padding: 110px 40px;">
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+      <div data-reveal>
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #b08d3e; font-weight: 600;">A Oferta</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 36px; line-height: 1.22; margin-top: 16px; color: #182a40;">
+          O primeiro passo para a sua segurança: o Diagnóstico Jurídico Estratégico.
+        </h2>
+        <div style="width: 56px; height: 3px; background: #dabf86; margin: 26px 0;"></div>
+        <p style="font-size: 16px; line-height: 1.8; color: #3a4452; font-weight: 400;">
+          Ao entrar em contato, nossa equipe realizará uma análise preliminar da situação do seu imóvel ou contrato. Mapearemos os riscos atuais, identificaremos os gargalos burocráticos e apresentaremos o plano de ação mais rápido e seguro disponível na legislação vigente.
+        </p>
+      </div>
+      <div data-reveal style="background: #182a40; border-radius: 10px; padding: 44px; border: 1px solid rgba(218,191,134,0.3);">
+        <div style="display: flex; flex-direction: column; gap: 26px;">
+          <div style="display: flex; gap: 18px; align-items: flex-start;">
+            <span style="flex-shrink:0; width: 30px; height: 30px; border-radius: 50%; background: #dabf86; color: #182a40; font-family: 'Playfair Display', serif; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px;">1</span>
+            <p style="font-size: 15px; line-height: 1.6; color: #e5e5e5; font-weight: 300; padding-top: 3px;">Análise preliminar da situação do imóvel ou contrato.</p>
+          </div>
+          <div style="display: flex; gap: 18px; align-items: flex-start;">
+            <span style="flex-shrink:0; width: 30px; height: 30px; border-radius: 50%; background: #dabf86; color: #182a40; font-family: 'Playfair Display', serif; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px;">2</span>
+            <p style="font-size: 15px; line-height: 1.6; color: #e5e5e5; font-weight: 300; padding-top: 3px;">Mapeamento dos riscos atuais e gargalos burocráticos.</p>
+          </div>
+          <div style="display: flex; gap: 18px; align-items: flex-start;">
+            <span style="flex-shrink:0; width: 30px; height: 30px; border-radius: 50%; background: #dabf86; color: #182a40; font-family: 'Playfair Display', serif; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px;">3</span>
+            <p style="font-size: 15px; line-height: 1.6; color: #e5e5e5; font-weight: 300; padding-top: 3px;">Plano de ação mais rápido e seguro previsto em lei.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OBJEÇÕES ============ -->
+  <section style="background: #182a40; padding: 110px 40px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <div data-reveal style="text-align: center; max-width: 640px; margin: 0 auto 60px;">
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #dabf86; font-weight: 600;">Sem Rodeios</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 36px; line-height: 1.2; margin-top: 16px; color: #fff;">As dúvidas que provavelmente passam pela sua cabeça</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div data-reveal style="display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; background: #1d3349; border-left: 3px solid #dabf86; border-radius: 0 8px 8px 0; padding: 32px 36px;">
+          <i class="fa-solid fa-circle-question" style="color: #dabf86; font-size: 26px; margin-top: 4px;"></i>
+          <div><p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; color: #fff;">"Isso vai demorar muitos anos na justiça?"</p><p style="font-size: 15px; line-height: 1.75; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 12px;">Não necessariamente. Nossa especialidade é o Direito Imobiliário Extrajudicial. Sempre buscaremos a resolução direta em cartório, o que pode reduzir o prazo de anos para apenas alguns meses.</p></div>
+        </div>
+        <div data-reveal style="display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; background: #1d3349; border-left: 3px solid #dabf86; border-radius: 0 8px 8px 0; padding: 32px 36px;">
+          <i class="fa-solid fa-circle-question" style="color: #dabf86; font-size: 26px; margin-top: 4px;"></i>
+          <div><p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; color: #fff;">"Deve ser um serviço muito caro."</p><p style="font-size: 15px; line-height: 1.75; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 12px;">Mais caro é ter um imóvel desvalorizado ou perder um negócio por documentação irregular. Nossos honorários são um investimento direto na proteção e aumento do valor do seu patrimônio.</p></div>
+        </div>
+        <div data-reveal style="display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; background: #1d3349; border-left: 3px solid #dabf86; border-radius: 0 8px 8px 0; padding: 32px 36px;">
+          <i class="fa-solid fa-circle-question" style="color: #dabf86; font-size: 26px; margin-top: 4px;"></i>
+          <div><p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; color: #fff;">"A burocracia é muito complicada para mim."</p><p style="font-size: 15px; line-height: 1.75; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 12px;">É exatamente por isso que existimos. Você não precisará entender os jargões ou enfrentar filas. Nós traduzimos o direito para você e assumimos toda a carga burocrática.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GARANTIA + URGÊNCIA ============ -->
+  <section style="background: #e5e5e5; color: #182a40; padding: 110px 40px;">
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      <div data-reveal style="background: #fff; border: 1px solid rgba(218,191,134,0.6); border-radius: 10px; padding: 44px;">
+        <i class="fa-solid fa-handshake-angle" style="color: #b08d3e; font-size: 28px;"></i>
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 25px; margin-top: 20px; color: #182a40;">Nosso Compromisso de Transparência Institucional</h3>
+        <p style="font-size: 15px; line-height: 1.8; color: #3a4452; font-weight: 400; margin-top: 16px;">Em respeito ao Código de Ética da OAB, não prometemos causas ganhas. Nossa garantia é o <strong style="color:#182a40;">rigor técnico inegociável</strong> e a transparência absoluta. Você será informado de cada etapa do processo, conduzido por profissionais forjados nas mais altas instâncias da Administração Pública.</p>
+      </div>
+      <div data-reveal style="background: #182a40; border-radius: 10px; padding: 44px; color: #e5e5e5;">
+        <i class="fa-solid fa-triangle-exclamation" style="color: #dabf86; font-size: 28px;"></i>
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 25px; margin-top: 20px; color: #fff;">A inércia é o maior inimigo do seu patrimônio</h3>
+        <p style="font-size: 15px; line-height: 1.8; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 16px;">A legislação imobiliária e as normas de zoneamento municipal estão em constante evolução. Deixar um imóvel irregular para amanhã significa exposição a multas, autuações e riscos de perda de posse. <strong style="color:#dabf86;">Proteja o seu direito hoje.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" style="background: #e5e5e5; color: #182a40; padding: 110px 40px;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div data-reveal style="text-align: center; margin-bottom: 56px;">
+        <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #b08d3e; font-weight: 600;">Perguntas Frequentes</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38px; line-height: 1.2; margin-top: 16px; color: #182a40;">Esclareça suas dúvidas</h2>
+        <div style="width: 56px; height: 3px; background: #dabf86; margin: 26px auto 0;"></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <details data-reveal style="background: #fff; border: 1px solid rgba(24,42,64,0.1); border-radius: 8px; padding: 24px 28px;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 18px; color: #182a40;">O que é a Regularização Extrajudicial?<span class="faq-plus" style="color: #b08d3e; font-size: 24px; font-weight: 300; transition: transform 0.2s; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.75; color: #4a5462; font-weight: 400; margin-top: 16px;">É o processo feito diretamente em cartório, sem a necessidade de um juiz, tornando tudo mais rápido e menos custoso.</p>
+        </details>
+        <details data-reveal style="background: #fff; border: 1px solid rgba(24,42,64,0.1); border-radius: 8px; padding: 24px 28px;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 18px; color: #182a40;">Posso vender um imóvel com documentação irregular?<span class="faq-plus" style="color: #b08d3e; font-size: 24px; font-weight: 300; transition: transform 0.2s; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.75; color: #4a5462; font-weight: 400; margin-top: 16px;">Até pode, através de contratos de gaveta, mas o valor de mercado despenca e os riscos jurídicos para ambas as partes são imensos.</p>
+        </details>
+        <details data-reveal style="background: #fff; border: 1px solid rgba(24,42,64,0.1); border-radius: 8px; padding: 24px 28px;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 18px; color: #182a40;">Vocês atendem apenas em Betim?<span class="faq-plus" style="color: #b08d3e; font-size: 24px; font-weight: 300; transition: transform 0.2s; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.75; color: #4a5462; font-weight: 400; margin-top: 16px;">Embora nossa matriz e forte expertise local estejam em Betim, atuamos estrategicamente em âmbito nacional, especialmente em consultoria empresarial e estruturação imobiliária.</p>
+        </details>
+        <details data-reveal style="background: #fff; border: 1px solid rgba(24,42,64,0.1); border-radius: 8px; padding: 24px 28px;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 18px; color: #182a40;">Como funciona o Usucapião Extrajudicial?<span class="faq-plus" style="color: #b08d3e; font-size: 24px; font-weight: 300; transition: transform 0.2s; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.75; color: #4a5462; font-weight: 400; margin-top: 16px;">Se você cumpre os requisitos de tempo e posse pacífica, podemos solicitar o reconhecimento da propriedade diretamente no cartório de registro de imóveis.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section id="contato" style="position: relative; background: linear-gradient(180deg, #182a40 0%, #142334 100%); padding: 120px 40px; text-align: center; overflow: hidden;">
+    <div style="position:absolute; inset:0; background-image: radial-gradient(circle at 50% 0%, rgba(218,191,134,0.12), transparent 55%); pointer-events:none;"></div>
+    <div data-reveal style="max-width: 760px; margin: 0 auto; position: relative;">
+      <span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #dabf86; font-weight: 600;">Fale Conosco</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 46px; line-height: 1.18; margin-top: 20px; color: #fff;">
+        Não permita que a burocracia coloque em risco o patrimônio que você lutou tanto para construir.
+      </h2>
+      <p style="font-size: 17px; line-height: 1.75; color: rgba(229,229,229,0.78); font-weight: 300; margin-top: 24px;">
+        Fale diretamente com a nossa equipe e tenha a clareza jurídica que o seu caso exige.
+      </p>
+      <a href="https://wa.me/5531983295248?text=Ol%C3%A1%20Thales%20Brand%C3%A3o!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20regulariza%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener" style="margin-top: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: #dabf86; color: #182a40; text-decoration: none; font-weight: 600; font-size: 17px; letter-spacing: 0.3px; padding: 20px 44px; border-radius: 6px; box-shadow: 0 12px 36px rgba(218,191,134,0.22);">
+        <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Quero Falar com um Advogado Especialista
+      </a>
+      <p style="font-size: 13px; color: rgba(229,229,229,0.6); font-weight: 300; margin-top: 18px;">Atendimento confidencial, ágil e direto pelo WhatsApp.</p>
+      <div style="max-width: 620px; margin: 56px auto 0; padding: 24px 28px; border: 1px solid rgba(218,191,134,0.25); border-radius: 8px; background: rgba(218,191,134,0.04);">
+        <p style="font-size: 14px; line-height: 1.7; color: rgba(229,229,229,0.78); font-weight: 300;"><strong style="color:#dabf86; font-weight:600;">P.S.:</strong> Cada dia de atraso na regularização do seu imóvel é uma oportunidade a mais para imprevistos legais. Resolva isso agora com a Brandão e Rezende Advocacia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: #101d2d; padding: 64px 40px 40px; border-top: 1px solid rgba(218,191,134,0.15);">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
+      <div style="max-width: 360px;">
+        <img src="images/br-logo.png" alt="Brandão &amp; Rezende Advocacia" style="height: 52px; width: auto; display: block;">
+        <p style="font-size: 13px; line-height: 1.7; color: rgba(229,229,229,0.55); font-weight: 300; margin-top: 20px;">Assessoria jurídica especializada em Direito Imobiliário Extrajudicial e Judicial. Matriz em Betim/MG — atuação em âmbito nacional.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #dabf86; margin-bottom: 4px;">Navegação</span>
+        <a href="#beneficios" style="color: rgba(229,229,229,0.7); text-decoration: none; font-size: 14px;">Benefícios</a>
+        <a href="#socios" style="color: rgba(229,229,229,0.7); text-decoration: none; font-size: 14px;">Os Sócios</a>
+        <a href="#faq" style="color: rgba(229,229,229,0.7); text-decoration: none; font-size: 14px;">FAQ</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #dabf86; margin-bottom: 4px;">Contato</span>
+        <a href="https://wa.me/5531983295248?text=Ol%C3%A1%20Thales%20Brand%C3%A3o!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20regulariza%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener" style="color: rgba(229,229,229,0.7); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;"><i class="fa-brands fa-whatsapp" style="color:#dabf86;"></i> WhatsApp</a>
+        <span style="color: rgba(229,229,229,0.7); font-size: 14px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-location-dot" style="color:#dabf86;"></i> Betim — Minas Gerais</span>
+      </div>
+    </div>
+    <div style="max-width: 1100px; margin: 48px auto 0; padding-top: 28px; border-top: 1px solid rgba(229,229,229,0.08); display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between;">
+      <span style="font-size: 12px; color: rgba(229,229,229,0.4); font-weight: 300;">© 2026 Brandão &amp; Rezende Advocacia. Todos os direitos reservados.</span>
+      <span style="font-size: 12px; color: rgba(229,229,229,0.4); font-weight: 300;">Em conformidade com o Código de Ética da OAB.</span>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLUTUANTE ============ -->
+  <a href="https://wa.me/5531983295248?text=Ol%C3%A1%20Thales%20Brand%C3%A3o!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20regulariza%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="position: fixed; bottom: 28px; right: 28px; z-index: 100; display: flex; align-items: center; gap: 12px; background: #dabf86; color: #182a40; text-decoration: none; padding: 14px 22px 14px 16px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); font-weight: 600; font-size: 14px;">
+    <span style="width: 40px; height: 40px; border-radius: 50%; background: #182a40; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-whatsapp" style="color: #dabf86; font-size: 22px;"></i></span>
+    Fale com um Especialista
+  </a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._tries = 0;
+    this._setup();
+  }
+
+  _setup() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!els.length) {
+      if (this._tries++ < 40) { requestAnimationFrame(() => this._setup()); }
+      return;
+    }
+
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      els.forEach(e => e.classList.add('rv-in'));
+      return;
+    }
+
+    // staggered delay per group of siblings
+    const counters = new Map();
+    els.forEach(e => {
+      const p = e.parentElement;
+      const i = counters.get(p) || 0;
+      e.style.animationDelay = (Math.min(i, 6) * 85) + 'ms';
+      counters.set(p, i + 1);
+    });
+
+    // scroll-based reveal (robust against preview scaling/transforms)
+    let pending = els.slice();
+    const check = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      pending = pending.filter(e => {
+        const r = e.getBoundingClientRect();
+        if (r.top < vh * 0.9 && r.bottom > -40) {
+          e.classList.add('rv-in');
+          return false;
+        }
+        return true;
+      });
+      if (!pending.length) {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onScroll);
+      }
+    };
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { ticking = false; check(); });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    check();
+  }
+}
+</script>
+</body>
+</html>
